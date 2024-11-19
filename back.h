@@ -5,7 +5,6 @@
 
 class Back {
 public:
-    // todo: implement setter
     Back(const QString& basePath);
     void InitializeSkin(const QString& basePath);
     QPixmap getBack() const;
