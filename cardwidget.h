@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QPixmap>
 #include <QPainter>
-#include <QPropertyAnimation> // Include QPropertyAnimation
+#include <QPropertyAnimation>
 
 class CardWidget : public QWidget
 {
@@ -15,14 +15,14 @@ public:
     ~CardWidget() = default;
 
     void setPixmap(QPixmap _pixmap);
-    void animateEntry(); // Function to start the animation
+    void animateEntry();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
     QPixmap pixmap;
-    QPropertyAnimation *animation; // Animation pointer
+    QPropertyAnimation *animation;
 };
 
 #endif // CARDWIDGET_H
