@@ -27,14 +27,12 @@ BadgeLabel<T>::BadgeLabel(T value, QWidget *parent, const QString& textColor, in
     this->setAutoFillBackground(true);
     this->raise();
 
-    // Apply custom text color
     setStyleSheet(QString("background-color: #999999; color: %1; border-radius: 10px;").arg(textColor));
     // Set custom font size
     QFont font = this->font();
     font.setPointSize(fontSize);
     setFont(font);
 
-    // Adjust size based on font metrics
     QFontMetrics fm(font);
     int width = fm.horizontalAdvance(text()) + 20;
     int height = fm.height() + 10;
