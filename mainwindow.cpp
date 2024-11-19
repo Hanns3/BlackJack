@@ -18,7 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     , audioOutputStand(std::make_unique<QAudioOutput>(this))
 {
     ui->setupUi(this);
-    game = new Game();
+    
+    game = std::make_unique<Game>();
 
     musicPlayer = std::make_unique<MusicPlayer>(ui->musicButton, pathToBackgroundMusic, this);
     soundHitButton->setSource(QUrl(pathToCardDropSound));
