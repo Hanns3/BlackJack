@@ -44,7 +44,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Game* game;
+    std::unique_ptr<Game> game;
     std::unique_ptr<MusicPlayer> musicPlayer;
     std::unique_ptr<QMediaPlayer> soundHitButton;
     std::unique_ptr<QMediaPlayer> soundRefreshButton;
