@@ -7,17 +7,17 @@
 
 class Deck {
 public:
-    Deck();
+    Deck(QString basePath);
     void shuffle();
     Card drawCard();
-    QString suitToString(Suit suit) const;
-    QString rankToString(Rank rank) const;
-    Card getBack();
-
+    QPixmap getBack() const;
+    void setBasePath(QString _basePath);
 
 private:
     std::vector<Card> cards;
-    void initializeDeck();
+    Back back;
+    QString path;
+    void initializeDeck(const QString& basePath);
 };
 
 #endif // DECK_H

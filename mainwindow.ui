@@ -6,25 +6,198 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1245</width>
+    <height>833</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-image: url(:/images/images/background.jpg);
-background-position: center</string>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::RightToLeft</enum>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/background.jpg);
+background-position: center</string>
+   </property>
+   <widget class="QPushButton" name="hit">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>80</y>
+      <width>131</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/images/hit.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stand">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>250</y>
+      <width>131</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/images/stand.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="refreshButton">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>650</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 20px;
+font-weight: bold;
+color: rgb(250, 237, 202);</string>
+    </property>
+    <property name="text">
+     <string>Restart</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>690</y>
+      <width>451</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent</string>
+    </property>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>0</y>
+       <width>361</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove::horizontal
+{
+	height:30px;
+	width: 350px;
+	background: rgb(200, 200, 200);
+	border: 3px solid rbg(255, 0, 0);
+	border-radius: 18px;
+}
+
+QSlider::handle:horizontal
+{
+	background: rgb(52, 50, 64);
+	border: rgb(255, 0, 0);
+	width: 20px;
+	margin: -5px 0;
+	border-radius: 10px;
+}
+
+QSlider:sub-page:horizontal
+{
+	height: 30px;
+	background: rgb(255, 0, 0);
+	border: 3px solid rgb(255, 0, 0);
+	border-radius: 18px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="singleStep">
+      <number>5</number>
+     </property>
+     <property name="pageStep">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="deckChangeButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>700</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="toolTipDuration">
+     <number>0</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/images/menu.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="musicButton">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>700</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>1245</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
